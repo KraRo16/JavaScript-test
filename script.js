@@ -136,3 +136,13 @@
 // console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }))
 
 
+// // Change code below this line
+// function add(...args) {
+//   let result = 0;
+//   for (let arg of args) {
+//     result += arg
+//   }
+//   return result;
+//   // Change code above this line
+// }
+// console.log(add(32, 6, 13, 19, 8))
