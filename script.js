@@ -146,3 +146,14 @@
 //   // Change code above this line
 // }
 // console.log(add(32, 6, 13, 19, 8))
+
+const atTheOldToad = {
+  potions: ["Speed potion", "Dragon breath", "Stone skin"],
+  removePotion(potionName) {
+    // Change code below this line
+  const potionsIndex = this.potions.indexOf("Dragon breath")
+    this.potions.splice(potionsIndex,1)
+    // Change code above this line
+  },
+};
+console.log(atTheOldToad.removePotion("Dragon breath"))
