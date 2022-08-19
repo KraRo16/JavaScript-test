@@ -98,7 +98,7 @@
 //     }
 //     if (a > b) {
 //         return b;
-//     } 
+//     }
 //     return a;
 // }
 // console.log(min(2, 11));
@@ -135,7 +135,6 @@
 // }
 // console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }))
 
-
 // // Change code below this line
 // function add(...args) {
 //   let result = 0;
@@ -147,13 +146,42 @@
 // }
 // console.log(add(32, 6, 13, 19, 8))
 
-const atTheOldToad = {
-  potions: ["Speed potion", "Dragon breath", "Stone skin"],
-  removePotion(potionName) {
-    // Change code below this line
-  const potionsIndex = this.potions.indexOf("Dragon breath")
-    this.potions.splice(potionsIndex,1)
-    // Change code above this line
-  },
-};
-console.log(atTheOldToad.removePotion("Dragon breath"))
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     // Change code below this line
+//   const potionsIndex = this.potions.indexOf("Dragon breath")
+//     this.potions.splice(potionsIndex,1)
+//     // Change code above this line
+//   },
+// };
+// console.log(atTheOldToad.removePotion("Dragon breath"))
+
+// Колбэк-функция
+function greet(name) {
+  return `Добро пожаловать ${name}.`;
+}
+
+// Функция высшего порядка
+function registerGuest(name, callback) {
+  // console.log(`Регистрируем гостя ${name}.`);
+  callback(name);
+}
+
+console.log(registerGuest('Манго', greet));
+// ////////////
+// function deliverPizza(pizzaName) {
+//   return `Delivering ${pizzaName} pizza.`;
+// }
+
+// // function makePizza(pizzaName) {
+// //   return `Pizza ${pizzaName} is being prepared, please wait...`;
+// // }
+
+// // Chande code below this line
+// function makeMessage(pizzaName, callback) {
+//   // return;
+//   callback(pizzaName);
+// }
+// // console.log(makeMessage('Royal Grand', deliverPizza));
+// console.log(makeMessage('Ultracheese', deliverPizza));
