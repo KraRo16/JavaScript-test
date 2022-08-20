@@ -158,17 +158,17 @@
 // console.log(atTheOldToad.removePotion("Dragon breath"))
 
 // Колбэк-функция
-function greet(name) {
-  return `Добро пожаловать ${name}.`;
-}
+// function greet(name) {
+//   return `Добро пожаловать ${name}.`;
+// }
 
-// Функция высшего порядка
-function registerGuest(name, callback) {
-  // console.log(`Регистрируем гостя ${name}.`);
-  callback(name);
-}
+// // Функция высшего порядка
+// function registerGuest(name, callback) {
+//   // console.log(`Регистрируем гостя ${name}.`);
+//   callback(name);
+// }
 
-console.log(registerGuest('Манго', greet));
+// console.log(registerGuest('Манго', greet));
 // ////////////
 // function deliverPizza(pizzaName) {
 //   return `Delivering ${pizzaName} pizza.`;
@@ -185,3 +185,91 @@ console.log(registerGuest('Манго', greet));
 // }
 // // console.log(makeMessage('Royal Grand', deliverPizza));
 // console.log(makeMessage('Ultracheese', deliverPizza));
+
+/////////////////////////////////////////////
+//Напиши скрипт, который для объекта user,
+//последовательно:
+//1 добавит поле mood со значением 'happy'
+//2 заменит hobby на 'skydiving'
+//3 заменит значение premium на false
+//4 выводит содержимое объекта users в фортмате
+//ключ:значение используя Object.keys() и for...of
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tenis",
+//   premium: true,
+// };
+// user.mood = 'happy';
+// user.hobby = 'skydiving';
+// user.premium = false;
+// console.log(user);
+// console.log(Object.keys(user));
+// for (const key of Object.keys(user)) {
+//   console.log(`${key}: ${user[key]}`);
+// }
+//////////////
+//У нас есть объект, в котором храняться зарплаты
+//нашей команды
+//Напишите код для сумирования всех зарплат и
+//сохраните его результат в переменной sum.
+//Если объект salaries пуст, то результат должен быть 0
+// const salaries = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
+// const totalSalary = salary => {
+//   console.log(Object.values(salary));
+//   let total = 0;
+//   for (const a of Object.values(salary)) {
+//     total += a;
+//   }
+//   return total;
+// };
+// console.log(totalSalary({}));
+////////////////////
+//Создайте объект calculator с тремя методами
+//read(a, b) - принимает два аргумента и сохраняет их
+//как свойства объекта
+//sum() возвращает сумму сохраненных значений
+//mult() перемножает сохраненные значения и возвращает результат
+// const calculator = {
+//   read(a, b) {
+//     this.value1 = a;
+//     this.value2 = b;
+//   },
+//   sum() {
+//     return this.value1 || this.value2 ? this.value1 + this.value2 : 'False';
+//   },
+//   mult() {
+//     return this.value1 * this.value2;
+//   },
+// };
+// calculator.read(5, 2);
+// console.log(calculator.sum());
+// console.log(calculator.mult());
+
+// console.log(calculator);
+//////////////////
+//Напишите функцию updateObject, которая принимает объект и возвращает
+//новый объект без указанного параметра
+//Ожидаемый результат ({a: 1. b: 2}, 'b') => {a: 1}
+// const updateObject = (object, param) => {
+//   const copyOfObject = { ...object };
+//   delete copyOfObject[param];
+//   return copyOfObject;
+// };
+
+// console.log(updateObject({ a: 1, b: 2 }, 'b'));
+///////////////////////
+//Напишите функцию, которая принимает как параметр объект
+//и формирует объекты в новом массиве в формате [key, value]
+// const user = {
+//   name: "John",
+//   surName: "Stones",
+//   age: 20,
+//   hobby: "tenis",
+//   haveCar: true,
+//   merried: false,
+// };
